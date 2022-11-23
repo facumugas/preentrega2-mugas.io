@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    margin-left: 20px;
+    filter: invert(1);
+}
+
+.bar-btn{
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 100px;
+    background: rgba(0, 0, 0, .7);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a{
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.activa, .nav-menu li a:hover{
+    color: red;
+    transition: .3s;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ⁓ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ⁓ .nav-menu li{
+    display: block;
+}
+
+@media screen and (min-width: 768px){
+    
+    .logo{
+        margin-left: 50px;
+    }
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a{
+        font-size: 12px;
+    }
+}
+.banner-text{
+    padding: 0 30px;
+    margin-top: 240px;
+    text-align: center;
+    color: white;
+}
+.banner-text h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 70px;
+    align-items: center;
+    padding: 10px;
+}
+.foot{
+    display: flex;
+align-items: center;
+color: black;
+}
+.foot img{
+    height: 50px;
+    margin-right: 10px;
+}
